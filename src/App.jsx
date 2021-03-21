@@ -1,14 +1,25 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import QRCodeGen from "./Components/QRCodeGen/QRCodeGen";
-import Share from "./Components/Share/Share";
+import Auth from "./Pages/Auth/Auth";
+import About from "./Pages/About/About";
+import Home from "./Pages/Home/Home";
 
 const App = () => {
   return (
-    <div style={{ marginLeft: "10px" }}>
-      <h1>Link Shortner</h1>
-      <Share />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/auth">
+          <Auth />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 
