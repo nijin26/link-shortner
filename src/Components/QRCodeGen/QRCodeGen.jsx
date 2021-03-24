@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 
-import QRCode from "react-qr-code";
+import QRCode from "qrcode.react";
+
+import styles from "./QRCodeGen.module.css";
 
 const QRCodeGen = ({ target }) => {
   const download = () => {
@@ -24,7 +26,7 @@ const QRCodeGen = ({ target }) => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <QRCode
         id="QRCode"
         value={target}
@@ -32,8 +34,18 @@ const QRCodeGen = ({ target }) => {
         bgColor={"#ffffff"}
         fgColor={"#1f1e1e"}
         level={"L"}
+        renderAs={"svg"}
+        imageSettings={{
+          src: "https://static.zpao.com/favicon.png",
+          x: null,
+          y: null,
+          height: 24,
+          width: 24,
+        }}
       />
-      <input type="button" value="Download QR" onClick={download} />
+      <div className={styles.overlay}>
+        <input type="button" value="Download QR" onClick={download} />
+      </div>
     </div>
   );
 };

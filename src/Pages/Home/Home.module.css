@@ -45,3 +45,21 @@
   background: black;
   color: white;
 }
+
+.resultModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultModal > input {
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.resultModal > input:focus {
+  outline: 1px solid transparent;
+}

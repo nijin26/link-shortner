@@ -16,7 +16,10 @@ import styles from "./Share.module.css";
 const Share = ({ title, description, target }) => {
   return (
     <div className={styles.container}>
-      <a href={`http://www.linkedin.com/shareArticle?mini=true&url=${target}`}>
+      <a
+        target="_blank"
+        href={`http://www.linkedin.com/shareArticle?mini=true&url=${target}`}
+      >
         <LinkedinIcon size={36} round={true} />
       </a>
       <TwitterShareButton via="bitlyclone" title={title} url={target}>
@@ -28,7 +31,6 @@ const Share = ({ title, description, target }) => {
       <TelegramShareButton title={title} url={target}>
         <TelegramIcon size={36} round={true} />
       </TelegramShareButton>
-
       <FacebookShareButton url={target} quote={title}>
         <FacebookIcon size={36} round={true} />
       </FacebookShareButton>
