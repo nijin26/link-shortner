@@ -16,14 +16,10 @@ const Auth = () => {
         <FaGithub size={28} />
       </div>
       <form className={styles.form}>
-        <label htmlFor="name">Username:</label>
-        <input type="text" name="username" id="name" />
-        <label htmlFor="email">Email:</label>
-        <input type="mai" name="email" id="email" />
-        <label htmlFor="password">Password:</label>
-        <input type="password" name="password" id="password" />
-        <label htmlFor="confirm">Confirm Password:</label>
-        <input type="password" name="confirm" id="confirm" />
+        <input type="text" name="username" placeholder="name" />
+        <input type="mai" name="email" placeholder="email" />
+        <input type="password" name="password" placeholder="password" />
+        <input type="password" name="confirm" placeholder="confirm" />
         <button type="submit"> Sign Up </button>
       </form>
     </div>
