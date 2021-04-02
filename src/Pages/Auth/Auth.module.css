@@ -24,14 +24,16 @@
 }
 
 .form {
-  padding: 12px;
-  margin-bottom: 60px;
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  align-self: center;
 }
 
 .form > input {
-  width: 90%;
+  width: 100%;
   padding: 8px;
-  margin-top: 14px;
+  margin: 10px auto;
   font-size: 16px;
   border-radius: 8px;
   outline: none;
@@ -40,8 +42,13 @@
 }
 
 .btn {
-  display: block;
-  margin-top: 20px;
+  width: 50%;
+  margin: 30px 25%;
+  padding: 8px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  box-shadow: 0.5px 1px 8px #ccc;
 }
 
 @media (min-width: 600px) {
