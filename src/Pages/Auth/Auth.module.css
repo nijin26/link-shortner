@@ -1,8 +1,10 @@
 .container {
   width: 70%;
   margin: 30px auto;
+  padding: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   box-shadow: 1px 1px 12px #ccc;
   flex: 1 1;
@@ -14,22 +16,32 @@
 }
 
 .social {
-  margin: 20px auto;
   width: 130px;
   display: flex;
   justify-content: space-between;
   flex: 1 1;
+  height: 30px;
 }
 
 .form {
-  background: red;
-
-  padding: 8px;
+  padding: 12px;
+  margin-bottom: 60px;
 }
 
 .form > input {
-  display: block;
   width: 90%;
+  padding: 8px;
+  margin-top: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  box-shadow: 0.5px 1px 8px #ccc;
+}
+
+.btn {
+  display: block;
+  margin-top: 20px;
 }
 
 @media (min-width: 600px) {

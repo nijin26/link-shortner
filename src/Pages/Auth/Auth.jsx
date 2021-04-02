@@ -20,7 +20,9 @@ const Auth = () => {
         <input type="mai" name="email" placeholder="email" />
         <input type="password" name="password" placeholder="password" />
         <input type="password" name="confirm" placeholder="confirm" />
-        <button type="submit"> Sign Up </button>
+        <button type="submit" className={styles.btn}>
+          Sign Up
+        </button>
       </form>
     </div>
   );
