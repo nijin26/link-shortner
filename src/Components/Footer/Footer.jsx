@@ -1,13 +1,9 @@
 import React from "react";
 
-import styles from "./Footer.module.css";
+import AppFooter from "../../styles/components/Footer";
 
 const Footer = () => {
-  return (
-    <footer className={styles.footer}>
-      Design,Developed & Maintained By Nijin & Bijoy
-    </footer>
-  );
+  return <AppFooter>Design,Developed & Maintained By Nijin & Bijoy</AppFooter>;
 };
 
 export default Footer;

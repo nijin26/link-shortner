@@ -15,7 +15,7 @@ const Auth = () => {
         <FaTwitter size={28} />
         <FaGithub size={28} />
       </div>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={() => console.log("Submited")}>
         <input type="text" name="username" placeholder="Name" />
         <input type="mai" name="email" placeholder="Email" />
         <input type="password" name="password" placeholder="Password" />
@@ -23,6 +23,9 @@ const Auth = () => {
         <button type="submit" className={styles.btn}>
           Sign Up
         </button>
+        <p>
+          Already a Member ? <b>Login</b>{" "}
+        </p>
       </form>
     </div>
   );

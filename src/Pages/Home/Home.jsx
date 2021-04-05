@@ -22,32 +22,30 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.form}>
-        <form>
-          <input
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            type="text"
-            placeholder="Title"
-          />
-          <input
-            value={url}
-            type="text"
-            onChange={(e) => setUrl(e.target.value)}
-            placeholder="Loooong URL"
-          />
-          <button onClick={onShorten} disabled={url === ""}>
-            Shorten
-          </button>
-        </form>
-        <Modal show={isShowing} close={closeModalHandler}>
-          <div className={styles.resultModal}>
-            <QRCodeGen target={url} />
-            <input type="text" value={url} />
-            <Share target={url} />
-          </div>
-        </Modal>
-      </div>
+      <form>
+        <input
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          type="text"
+          placeholder="Title"
+        />
+        <input
+          value={url}
+          type="text"
+          onChange={(e) => setUrl(e.target.value)}
+          placeholder="Loooong URL"
+        />
+        <button onClick={onShorten} disabled={url === ""}>
+          Shorten
+        </button>
+      </form>
+      <Modal show={isShowing} close={closeModalHandler}>
+        <div className={styles.resultModal}>
+          <QRCodeGen target={url} />
+          <input type="text" value={url} />
+          <Share target={url} />
+        </div>
+      </Modal>
     </div>
   );
 };
