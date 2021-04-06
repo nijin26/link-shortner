@@ -8,4 +8,27 @@ export const AppNavBar = styled.nav`
   justify-content: space-between;
 `;
 
-export const image = styled.div``;
+export const Image = styled.div`
+  margin-left: 30px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+
+  & > img {
+    width: 80px;
+  }
+`;
+
+export const NavLinks = styled.div`
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 30px;
+
+  & > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+`;

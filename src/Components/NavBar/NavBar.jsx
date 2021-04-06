@@ -2,26 +2,25 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import Logo from "../../assets/logo_sample.png";
-import styles from "./NavBar.module.css";
-
+import { AppNavBar, Image, NavLinks } from "../../styles/components/NavBar";
 const NavBar = () => {
   return (
-    <nav className={styles.nav}>
-      <div className={styles.image}>
+    <AppNavBar>
+      <Image>
         <img src={Logo} alt="Logo" />
-      </div>
-      <div className={styles.NavLinks}>
-        <NavLink to="/" exact activeClassName={styles.active}>
+      </Image>
+      <NavLinks>
+        <NavLink to="/" exact activeStyle={{ color: "white" }}>
           Create
         </NavLink>
-        <NavLink to="/about" exact activeClassName={styles.active}>
+        <NavLink to="/about" exact activeStyle={{ color: "white" }}>
           About
         </NavLink>
-        <NavLink to="/auth" exact activeClassName={styles.active}>
+        <NavLink to="/auth" exact activeStyle={{ color: "white" }}>
           Login
         </NavLink>
-      </div>
-    </nav>
+      </NavLinks>
+    </AppNavBar>
   );
 };
 
