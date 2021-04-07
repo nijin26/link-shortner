@@ -1,8 +1,6 @@
-import React, { useRef } from "react";
-
+import React from "react";
 import QRCode from "qrcode.react";
-
-import styles from "./QRCodeGen.module.css";
+import { Container, Overlay } from "../../styles/components/QRCode";
 
 const QRCodeGen = ({ target }) => {
   const download = () => {
@@ -26,7 +24,7 @@ const QRCodeGen = ({ target }) => {
   };
 
   return (
-    <div className={styles.container}>
+    <Container>
       <QRCode
         id="QRCode"
         value={target}
@@ -43,10 +41,10 @@ const QRCodeGen = ({ target }) => {
           width: 24,
         }}
       />
-      <div className={styles.overlay}>
+      <Overlay>
         <input type="button" value="Download QR" onClick={download} />
-      </div>
-    </div>
+      </Overlay>
+    </Container>
   );
 };
 
