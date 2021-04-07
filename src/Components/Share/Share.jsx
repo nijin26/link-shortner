@@ -11,11 +11,11 @@ import {
   TwitterIcon,
 } from "react-share";
 
-import styles from "./Share.module.css";
+import AppShare from "../../styles/components/Share";
 
 const Share = ({ title, description, target }) => {
   return (
-    <div className={styles.container}>
+    <AppShare>
       <a
         target="_blank"
         href={`http://www.linkedin.com/shareArticle?mini=true&url=${target}`}
@@ -34,7 +34,7 @@ const Share = ({ title, description, target }) => {
       <FacebookShareButton url={target} quote={title}>
         <FacebookIcon size={36} round={true} />
       </FacebookShareButton>
-    </div>
+    </AppShare>
   );
 };
 
