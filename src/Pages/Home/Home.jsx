@@ -59,7 +59,9 @@ const Home = () => {
       <Modal show={isShowing} close={closeModalHandler}>
         <div className={styles.resultModal}>
           <QRCodeGen target={result} />
-          <input type="text" value={result} />
+          <a href={`http://${result}`} target="_blank">
+            {result}
+          </a>
           <Share target={result} />
         </div>
       </Modal>
