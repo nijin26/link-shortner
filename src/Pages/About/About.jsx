@@ -8,7 +8,7 @@ const About = () => {
     <div className={styles.about}>
       <div>
         <Wrapper>
-          <Title>Design & Developed By Nijin Nazar</Title>
+          <Title>Under Construction</Title>
         </Wrapper>
       </div>
     </div>

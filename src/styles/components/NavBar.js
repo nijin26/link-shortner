@@ -22,6 +22,7 @@ export const Image = styled.div`
 export const NavLinks = styled.div`
   width: 200px;
   display: flex;
+  font-size: 1.6rem;
   align-items: center;
   justify-content: space-between;
   margin-right: 30px;
