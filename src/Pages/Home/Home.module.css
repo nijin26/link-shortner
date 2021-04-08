@@ -38,7 +38,7 @@ form > button {
   transition: 0.5s;
 }
 
-.form > form > button:hover {
+form > button:hover {
   background: black;
   color: white;
 }
