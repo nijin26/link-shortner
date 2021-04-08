@@ -20,12 +20,13 @@ const Home = () => {
   const onShorten = (e) => {
     e.preventDefault();
     setIsLoading(true);
+
     axios
       .post(api, { user_url: url })
       .then((res) => {
+        setResult(res.data.data.shortened_url);
         setIsShowing(true);
         setIsLoading(false);
-        setResult(res.data.data.shortened_url);
       })
       .catch((err) => {
         console.log(err);
