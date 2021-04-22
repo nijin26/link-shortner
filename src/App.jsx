@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import firebase from "./utils/firebase";
+import { useHandleAuth } from "./store/AuthProvider";
 
 import NavBar from "./Components/NavBar/NavBar";
 import Auth from "./Pages/Auth/Auth";
@@ -13,11 +14,13 @@ import GlobalStyle from "./styles/globalStyle";
 import { DarkTheme, LightTheme } from "./styles/Themes";
 
 const App = () => {
+  const toggleAuth = useHandleAuth();
+
   useEffect(() => {
     console.log(process.env.API_KEY);
     firebase.auth().onAuthStateChanged((user) => {
-      if (user) return console.log(user);
-      else return console.log("Not Signed In");
+      if (user) return toggleAuth(true);
+      else return toggleAuth(false);
     });
   }, []);
 

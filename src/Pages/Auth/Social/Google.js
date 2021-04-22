@@ -35,7 +35,7 @@ const Google = () => {
   };
 
   return (
-    <div onClick={handleSignIn}>
+    <div onClick={handleSignIn} style={{ cursor: "pointer" }}>
       <FaGoogle size={28} />
     </div>
   );

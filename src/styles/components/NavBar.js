@@ -31,5 +31,6 @@ export const NavLinks = styled.div`
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
+    cursor: pointer;
   }
 `;
