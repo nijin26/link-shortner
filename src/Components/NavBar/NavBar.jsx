@@ -17,7 +17,7 @@ const NavBar = () => {
           About
         </NavLink>
         <NavLink to="/auth" exact activeStyle={{ color: "white" }}>
-          Login
+          SignUp
         </NavLink>
       </NavLinks>
     </AppNavBar>
