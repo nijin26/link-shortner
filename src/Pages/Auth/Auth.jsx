@@ -1,6 +1,7 @@
 import React from "react";
 
-import { FaGoogle, FaGithub, FaTwitter } from "react-icons/all";
+import Google from "./Social/Google";
+import { FaGithub, FaTwitter } from "react-icons/all";
 import authImage from "../../assets/auth.png";
 
 import { Container, Social, Form, Button } from "../../styles/pages/Auth";
@@ -11,7 +12,7 @@ const Auth = () => {
       <img src={authImage} alt="logo" />
       <p>SignUp With Social</p>
       <Social>
-        <FaGoogle size={28} />
+        <Google />
         <FaTwitter size={28} />
         <FaGithub size={28} />
       </Social>
