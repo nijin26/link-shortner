@@ -14,8 +14,8 @@ const Google = () => {
       .signInWithPopup(provider)
       .then((result) => {
         /** @type {firebase.auth.OAuthCredential} */
-        var credential = result.credential;
-        console.log(credential);
+        console.log(result + "result of firebase");
+
         history.push("/");
 
         // // This gives you a Google Access Token. You can use it to access the Google API.
